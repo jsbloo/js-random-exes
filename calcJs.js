@@ -55,6 +55,7 @@ btnC.addEventListener("click", () => {sumString = ""; display.innerHTML = sumStr
 //---------------------------Equals logic------------------------------------------------
 
 const equate = () => {
+    if(sumString=="")return;
     sum = eval(sumString);
     log.push(sumString + " = " + sum);
     display.innerHTML = sum;
