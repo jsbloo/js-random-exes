@@ -28,4 +28,3 @@ const saveCount = () => {
 
 clickerBtn.addEventListener("click", increment);
 saveBtn.addEventListener("click", saveCount);
-
