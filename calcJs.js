@@ -2,7 +2,7 @@
 
 let sum = 0;
 let sumString = "";
-let log = [];
+let log = [];//not used but data is stored
 
 const display = document.getElementById("display");
 
@@ -17,6 +17,9 @@ const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
 const btn0 = document.getElementById("btn0");
+
+//--------------------------------log-------------------------------------------------
+const logE = document.getElementById("log");
 
 btn1.addEventListener("click", () => {sumString+="1"; display.innerHTML = sumString;});
 btn2.addEventListener("click", () => {sumString+="2"; display.innerHTML = sumString;});
@@ -49,15 +52,13 @@ btnRB.addEventListener("click", () => {sumString+= ")"; display.innerHTML = sumS
 btnC.addEventListener("click", () => {sumString = ""; display.innerHTML = sumString;});
 
 
-
-
-//---------------------------Equals logic-------------------------------------------------
+//---------------------------Equals logic------------------------------------------------
 
 const equate = () => {
     sum = eval(sumString);
-    log.push(sumString + " " + sum);
+    log.push(sumString + " = " + sum);
     display.innerHTML = sum;
-    console.log(sum)
+    logE.innerHTML += sumString + " = " + sum + "<br/>";
 }
 
 btnEq.addEventListener("click", equate);
